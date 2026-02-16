@@ -1,0 +1,8 @@
+[package]
+name = "wallpaper"
+version = "0.1.0"
+edition = "2024"
+description = "This is a very simple utility for changing hyprpaper wallpaper and running matugen aimed at streamlining this very mundane task."
+
+
+[dependencies]
