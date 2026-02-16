@@ -6,7 +6,6 @@ description = "This is a very simple utility for changing hyprpaper wallpaper an
 repository = "https://github.com/willdebug/wallpaper/"
 license-file = "LICENSE"
 readme = "README.md"
-homepage = ""
 
 
 [dependencies]
