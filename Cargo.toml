@@ -1,6 +1,6 @@
 [package]
 name = "wallpaper-util"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 description = "This is a very simple utility for changing hyprpaper wallpaper and running matugen aimed at streamlining this very mundane task."
 repository = "https://github.com/willdebug/wallpaper-util"
