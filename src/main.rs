@@ -19,14 +19,14 @@ fn change_wallpaper(new_file_name: String) {
     //Changing wallpaper
     let mut file = OpenOptions::new()
         .read(true)
-        .open("/home/william/.config/hypr/hyprpaper.conf")
+        .open("~/.config/hypr/hyprpaper.conf")
         .unwrap();
     let mut contents = String::new();
     file.read_to_string(&mut contents).unwrap();
     let mut file = OpenOptions::new()
         .truncate(true)
         .write(true)
-        .open("/home/william/.config/hypr/hyprpaper.conf")
+        .open("~/.config/hypr/hyprpaper.conf")
         .unwrap();
     let final_content = contents
         .lines()
@@ -41,14 +41,14 @@ fn change_wallpaper(new_file_name: String) {
     file.write_all(&final_content.into_bytes()).unwrap();
     let mut file = OpenOptions::new()
         .read(true)
-        .open("/home/william/.config/hypr/hyprlock.conf")
+        .open("~/.config/hypr/hyprlock.conf")
         .unwrap();
     let mut contents = String::new();
     file.read_to_string(&mut contents).unwrap();
     let mut file = OpenOptions::new()
         .truncate(true)
         .write(true)
-        .open("/home/william/.config/hypr/hyprlock.conf")
+        .open("~/.config/hypr/hyprlock.conf")
         .unwrap();
     let final_content = contents
         .lines()
@@ -69,9 +69,9 @@ fn change_wallpaper(new_file_name: String) {
 }
 
 fn choose_wallpaper() {
-    set_current_dir("/home/william/Pictures").unwrap();
+    set_current_dir("~/Pictures").unwrap();
     let fzf = std::process::Command::new("zenity")
-        .args(["--file-selection", "--filename=/home/william/Pictures/"])
+        .args(["--file-selection", "--filename=~/Pictures/"])
         .output()
         .unwrap()
         .stdout;
